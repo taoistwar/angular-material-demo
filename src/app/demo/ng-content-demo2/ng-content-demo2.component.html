@@ -1,0 +1,11 @@
+&lt;ng-content&gt; 不会 "产生" 内容，它只是投影现有的内容。<br />
+你可以认为它等价于 node.appendChild(el) 或 jQuery 中的 $(node).append(el)
+方法。<br />
+使用这些方法，节点不被克隆，它被简单地移动到它的新位置。<br />
+因此，投影内容的生命周期将被绑定到它被声明的地方，而不是显示在地方。
+<button (click)="show = !show">
+  {{ show ? 'Hide' : 'Show' }}
+</button>
+<div class="content" *ngIf="show">
+  <ng-container [ngTemplateOutlet]="template"></ng-container>
+</div>
