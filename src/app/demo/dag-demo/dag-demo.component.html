@@ -1,1 +1,32 @@
-<div #container></div>
+<div class="dag">
+  <div class="dag-toolbar">
+    <a (click)="zoomReset()" title="zoom reset">
+      <i nz-icon nzType="merge-cells" nzTheme="outline"></i
+    ></a>
+    <a (click)="save()"><i nz-icon nzType="save" nzTheme="outline"></i>保存</a>
+  </div>
+  <div class="dag-body">
+    <div class="dag-main">
+      <div #stencilContainer class="dag-stencil"></div>
+      <div #contentContainer class="dag-content"></div>
+    </div>
+    <div #minimapContainer class="dag-minimap"></div>
+  </div>
+
+  <nz-dropdown-menu #dropdownMenu="nzDropdownMenu">
+    <ul nz-menu nzSelectable>
+      <li nz-menu-item (click)="configNode()">
+        <i nz-icon nzType="edit" nzTheme="outline"></i>
+        配置
+      </li>
+      <li nz-menu-item (click)="previewNode()">
+        <i nz-icon nzType="eye" nzTheme="outline"></i>
+        预览
+      </li>
+      <li nz-menu-item (click)="deleteNode()">
+        <i nz-icon nzType="delete" nzTheme="outline" style="color: red"></i>
+        删除
+      </li>
+    </ul>
+  </nz-dropdown-menu>
+</div>

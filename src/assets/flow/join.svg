@@ -1,0 +1,11 @@
+<svg width="480" height="480" xmlns="http://www.w3.org/2000/svg">
+  <g>
+    <circle id="c" cx="200" cy="200" r="178"
+            stroke="#1296db"
+            stroke-width="24" fill="none"/>
+    <circle id="c" cx="276" cy="276" r="178"
+            stroke="#1296db"
+            stroke-width="24" fill="none"/>
+
+  </g>
+</svg>

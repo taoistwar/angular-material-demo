@@ -1,5 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { NzButtonModule } from 'ng-zorro-antd/button';
+import { NzDividerModule } from 'ng-zorro-antd/divider';
+import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
+import { NzIconModule } from 'ng-zorro-antd/icon';
+import { NzPopconfirmModule } from 'ng-zorro-antd/popconfirm';
+import { NzSpaceModule } from 'ng-zorro-antd/space';
+import { DagDemoComponent } from './dag-demo/dag-demo.component';
 import { DemoRoutingModule } from './demo-routing.module';
 import { DirectiveDemoComponent } from './directive-demo/directive-demo.component';
 import { RainbowDirective } from './directive-demo/rainbow.directive';
@@ -11,8 +18,6 @@ import { NgContentDemo2Component } from './ng-content-index/ng-content-demo2/ng-
 import { NgContentIndexComponent } from './ng-content-index/ng-content-index.component';
 import { ChildDemoComponent } from './view-child-demo/child-demo/child-demo.component';
 import { ViewChildDemoComponent } from './view-child-demo/view-child-demo.component';
-import { DagDemoComponent } from './dag-demo/dag-demo.component';
-
 @NgModule({
   declarations: [
     ViewChildDemoComponent,
@@ -27,6 +32,15 @@ import { DagDemoComponent } from './dag-demo/dag-demo.component';
     RainbowDirective,
     DagDemoComponent,
   ],
-  imports: [CommonModule, DemoRoutingModule],
+  imports: [
+    CommonModule,
+    NzDropDownModule,
+    DemoRoutingModule,
+    NzIconModule,
+    NzPopconfirmModule,
+    NzSpaceModule,
+    NzDividerModule,
+    NzButtonModule,
+  ],
 })
 export class DemoModule {}
