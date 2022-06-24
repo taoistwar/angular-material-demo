@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { ChildDemoComponent } from '../child-demo/child-demo.component';
+import { ChildDemoComponent } from './child-demo/child-demo.component';
 
 @Component({
   selector: 'app-view-child-demo',

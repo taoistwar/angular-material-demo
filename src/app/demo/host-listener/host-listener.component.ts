@@ -10,10 +10,14 @@ export class HostListenerComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
-  @HostListener('click') onKeydown(): void {
+
+  @HostListener('click')
+  onKeydown(): void {
     this.color = 'red';
   }
-  @HostListener('dblclick') onKeyup(): void {
+
+  @HostListener('dblclick')
+  onKeyup(): void {
     this.color = 'black';
   }
 }

@@ -1,1 +1,16 @@
 <div [ngStyle]="{ color: color }">host-listener works!</div>
+
+<h2>宿主元素</h2>
+<p>
+  宿主元素的概念同时适用于指令和组件。对于指令来说，这个概念是相当简单的。应用指令的元素，就是宿主元素。假设我们已声明了一个
+  HighlightDirective 指令 (selector: '[exeHighlight]')：
+</p>
+<pre>
+&lt;p exeHighlight&gt;
+  &lt;span&gt;高亮的文本&lt;/span&gt;
+&lt;/p&gt;
+</pre>
+<p>此时 exe-counter 自定义元素，就是宿主元素。</p>
+
+<h2>HostListener</h2>
+HostListener 是属性装饰器，用来为宿主元素添加事件监听。

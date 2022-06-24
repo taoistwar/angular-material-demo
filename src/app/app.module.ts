@@ -1,5 +1,9 @@
 import { LayoutModule } from '@angular/cdk/layout';
+import { registerLocaleData } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
+import zh from '@angular/common/locales/zh';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
@@ -11,12 +15,13 @@ import { MatSliderModule } from '@angular/material/slider';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NZ_I18N, zh_CN } from 'ng-zorro-antd/i18n';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NavComponent } from './nav/nav.component';
 import { WelcomeComponent } from './welcome/welcome.component';
-
+registerLocaleData(zh);
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,8 +43,10 @@ import { WelcomeComponent } from './welcome/welcome.component';
     MatGridListModule,
     MatCardModule,
     MatMenuModule,
+    FormsModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [{ provide: NZ_I18N, useValue: zh_CN }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

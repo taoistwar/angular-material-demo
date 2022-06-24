@@ -1,0 +1,45 @@
+.dag {
+  position: relative;
+  box-sizing: border-box;
+}
+.dag-body {
+  position: relative;
+}
+.dag-main {
+  box-sizing: border-box;
+  padding: 0;
+  display: flex;
+  height: calc(100vh - 64px);
+  border: 1px solid #ccc;
+}
+
+.dag-stencil {
+  box-sizing: border-box;
+  width: 220px;
+  border: 1px solid #f0f0f0;
+  position: relative;
+}
+
+.dag-content {
+  box-sizing: border-box;
+  flex: 1;
+  margin-left: 8px;
+  margin-right: 8px;
+  box-shadow: 0 0 10px 1px #e9e9e9;
+}
+
+.dag-minimap {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 200px;
+  height: calc(100vh - 64px);
+  border: 1px solid #ccc;
+}
+
+.dag-toolbar {
+  display: inline-flex;
+}
+.dag-toolbar a {
+  margin-right: 8px;
+}
