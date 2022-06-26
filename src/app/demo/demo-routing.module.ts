@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { DagDemoComponent } from './dag-demo/dag-demo.component';
 import { DirectiveDemoComponent } from './directive-demo/directive-demo.component';
 import { FlexDemoComponent } from './flex-demo/flex-demo.component';
+import { FormlyDemoComponent } from './formly-demo/formly-demo.component';
 import { HostBingingComponent } from './host-binging/host-binging.component';
 import { HostListenerComponent } from './host-listener/host-listener.component';
 import { IndexDemoComponent } from './index-demo/index-demo.component';
@@ -41,6 +42,10 @@ const routes: Routes = [
   {
     path: 'dag',
     component: DagDemoComponent,
+  },
+  {
+    path: 'formly',
+    component: FormlyDemoComponent,
   },
 ];
 

@@ -22,6 +22,8 @@
     "@angular/platform-browser-dynamic": "~13.3.11",
     "@angular/router": "~13.3.11",
     "@antv/x6": "^1.30.1",
+    "@ngx-formly/core": "^5.12.5",
+    "@ngx-formly/material": "^5.12.5",
     "@types/jquery-mousewheel": "^3.1.9",
     "jquery": "^3.6.0",
     "jquery-mousewheel": "^3.1.13",

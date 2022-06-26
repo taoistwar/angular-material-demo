@@ -1,5 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormlyModule } from '@ngx-formly/core';
+import { FormlyMaterialModule } from '@ngx-formly/material';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzDividerModule } from 'ng-zorro-antd/divider';
 import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
@@ -10,6 +13,7 @@ import { DagDemoComponent } from './dag-demo/dag-demo.component';
 import { DemoRoutingModule } from './demo-routing.module';
 import { DirectiveDemoComponent } from './directive-demo/directive-demo.component';
 import { RainbowDirective } from './directive-demo/rainbow.directive';
+import { FormlyDemoComponent } from './formly-demo/formly-demo.component';
 import { HostBingingComponent } from './host-binging/host-binging.component';
 import { HostListenerComponent } from './host-listener/host-listener.component';
 import { IndexDemoComponent } from './index-demo/index-demo.component';
@@ -31,6 +35,7 @@ import { ViewChildDemoComponent } from './view-child-demo/view-child-demo.compon
     DirectiveDemoComponent,
     RainbowDirective,
     DagDemoComponent,
+    FormlyDemoComponent,
   ],
   imports: [
     CommonModule,
@@ -41,6 +46,9 @@ import { ViewChildDemoComponent } from './view-child-demo/view-child-demo.compon
     NzSpaceModule,
     NzDividerModule,
     NzButtonModule,
+    ReactiveFormsModule,
+    FormlyModule.forRoot(),
+    FormlyMaterialModule,
   ],
 })
 export class DemoModule {}
