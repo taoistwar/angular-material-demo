@@ -9,3 +9,33 @@
   <li><a routerLink="/demo/flex">flex</a></li>
   <li><a routerLink="/demo/dag">dag</a></li>
 </ul>
+
+<nz-input-group nzCompact>
+  <nz-input-group
+    [nzSuffix]="suffixTemplate"
+    style="width: 20%"
+    [nzAddOnAfter]="addOnAfterTemplate"
+  >
+    <input nz-input placeholder="input password" />
+  </nz-input-group>
+
+  <input type="text" nz-input style="width: 30%" />
+</nz-input-group>
+<ng-template #suffixTemplate>
+  <a nz-dropdown [nzDropdownMenu]="menu">
+    <i nz-icon nzType="arrow-right"></i>
+  </a>
+</ng-template>
+<ng-template #addOnAfterTemplate>
+  <a nz-dropdown [nzDropdownMenu]="menu"
+    ><i nz-icon nzType="arrow-right"></i
+  ></a>
+</ng-template>
+<nz-dropdown-menu #menu="nzDropdownMenu">
+  <ul nz-menu nzSelectable>
+    <li nz-menu-item><a (click)="onClick('1')">1st menu item</a></li>
+    <li nz-menu-item>2nd menu item</li>
+    <li nz-menu-item>3rd menu item</li>
+    <li nz-menu-item nzDanger>4th danger item</li>
+  </ul>
+</nz-dropdown-menu>

@@ -1,5 +1,14 @@
 <p>flex-demo works!</p>
 
+<div class="native-main">
+  <div [class]="show ? 'native-nav show' : 'native-nav hide'">native-nav</div>
+  <div class="native-bound" (click)="toggle()">
+    &lt;
+
+    <i nz-icon nzType="alert" style="font-size: 16px; color: #08c"></i>
+  </div>
+  <div class="native-main">main</div>
+</div>
 <div style="width: 500px">
   <div
     class="two-row common"

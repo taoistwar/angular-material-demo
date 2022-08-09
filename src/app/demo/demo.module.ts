@@ -3,13 +3,17 @@ import { NgModule } from '@angular/core';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzDividerModule } from 'ng-zorro-antd/divider';
 import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
+import { NzGridModule } from 'ng-zorro-antd/grid';
 import { NzIconModule } from 'ng-zorro-antd/icon';
+import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzPopconfirmModule } from 'ng-zorro-antd/popconfirm';
 import { NzSpaceModule } from 'ng-zorro-antd/space';
 import { DagDemoComponent } from './dag-demo/dag-demo.component';
 import { DemoRoutingModule } from './demo-routing.module';
 import { DirectiveDemoComponent } from './directive-demo/directive-demo.component';
 import { RainbowDirective } from './directive-demo/rainbow.directive';
+import { NgModelFormDemoComponent } from './form/ng-model-form-demo/ng-model-form-demo.component';
+import { ReactiveFormDemoComponent } from './form/reactive-form-demo/reactive-form-demo.component';
 import { HostBingingComponent } from './host-binging/host-binging.component';
 import { HostListenerComponent } from './host-listener/host-listener.component';
 import { IndexDemoComponent } from './index-demo/index-demo.component';
@@ -31,16 +35,21 @@ import { ViewChildDemoComponent } from './view-child-demo/view-child-demo.compon
     DirectiveDemoComponent,
     RainbowDirective,
     DagDemoComponent,
+    ReactiveFormDemoComponent,
+    NgModelFormDemoComponent,
   ],
   imports: [
     CommonModule,
     NzDropDownModule,
     DemoRoutingModule,
-    NzIconModule,
     NzPopconfirmModule,
     NzSpaceModule,
     NzDividerModule,
     NzButtonModule,
+    NzGridModule,
+    NzInputModule,
+    NzIconModule,
+    NzDropDownModule,
   ],
 })
 export class DemoModule {}

@@ -21,3 +21,25 @@
 .v {
   font-size: 24px;
 }
+
+.native-main {
+  display: flex;
+}
+.native-main .native-nav {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #ccc;
+  transition: width 0.3s ease-out;
+}
+.native-main .native-main {
+  border: 1px solid #ccc;
+  width: 100%;
+}
+.native-bound {
+  width: 20px;
+}
+.native-main .native-nav.hide {
+  width: 0;
+  overflow: hidden;
+  transition: width 0.3s ease-in;
+}
