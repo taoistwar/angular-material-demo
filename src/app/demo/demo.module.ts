@@ -22,6 +22,8 @@ import { NgContentDemo2Component } from './ng-content-index/ng-content-demo2/ng-
 import { NgContentIndexComponent } from './ng-content-index/ng-content-index.component';
 import { ChildDemoComponent } from './view-child-demo/child-demo/child-demo.component';
 import { ViewChildDemoComponent } from './view-child-demo/view-child-demo.component';
+import { CanvasDemoComponent } from './canvas-demo/canvas-demo.component';
+import { WebglDemoComponent } from './webgl-demo/webgl-demo.component';
 @NgModule({
   declarations: [
     ViewChildDemoComponent,
@@ -37,6 +39,8 @@ import { ViewChildDemoComponent } from './view-child-demo/view-child-demo.compon
     DagDemoComponent,
     ReactiveFormDemoComponent,
     NgModelFormDemoComponent,
+    CanvasDemoComponent,
+    WebglDemoComponent,
   ],
   imports: [
     CommonModule,

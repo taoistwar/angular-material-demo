@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CanvasDemoComponent } from './canvas-demo/canvas-demo.component';
 import { DagDemoComponent } from './dag-demo/dag-demo.component';
 import { DirectiveDemoComponent } from './directive-demo/directive-demo.component';
 import { FlexDemoComponent } from './flex-demo/flex-demo.component';
@@ -8,6 +9,7 @@ import { HostListenerComponent } from './host-listener/host-listener.component';
 import { IndexDemoComponent } from './index-demo/index-demo.component';
 import { NgContentIndexComponent } from './ng-content-index/ng-content-index.component';
 import { ViewChildDemoComponent } from './view-child-demo/view-child-demo.component';
+import { WebglDemoComponent } from './webgl-demo/webgl-demo.component';
 
 const routes: Routes = [
   {
@@ -41,6 +43,14 @@ const routes: Routes = [
   {
     path: 'dag',
     component: DagDemoComponent,
+  },
+  {
+    path: 'canvas',
+    component: CanvasDemoComponent,
+  },
+  {
+    path: 'webgl',
+    component: WebglDemoComponent,
   },
 ];
 

@@ -12,4 +12,6 @@ export class NgContentDemo2Component implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  ss(i18n: string): void {}
 }
