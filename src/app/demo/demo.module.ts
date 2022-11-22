@@ -22,6 +22,7 @@ import { NgContentDemo2Component } from './ng-content-index/ng-content-demo2/ng-
 import { NgContentIndexComponent } from './ng-content-index/ng-content-index.component';
 import { ChildDemoComponent } from './view-child-demo/child-demo/child-demo.component';
 import { ViewChildDemoComponent } from './view-child-demo/view-child-demo.component';
+import { WebglStudyComponent } from './webgl-study/webgl-study.component';
 @NgModule({
   declarations: [
     ViewChildDemoComponent,
@@ -36,6 +37,7 @@ import { ViewChildDemoComponent } from './view-child-demo/view-child-demo.compon
     RainbowDirective,
     DagDemoComponent,
     FormlyDemoComponent,
+    WebglStudyComponent,
   ],
   imports: [
     CommonModule,
