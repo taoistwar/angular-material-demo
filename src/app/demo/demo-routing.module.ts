@@ -11,6 +11,7 @@ import { IndexDemoComponent } from './index-demo/index-demo.component';
 import { NgContentIndexComponent } from './ng-content-index/ng-content-index.component';
 import { ViewChildDemoComponent } from './view-child-demo/view-child-demo.component';
 import { WebglDemoComponent } from './webgl-demo/webgl-demo.component';
+import { WebglStudyComponent } from './webgl-study/webgl-study.component';
 
 const routes: Routes = [
   {
@@ -56,6 +57,10 @@ const routes: Routes = [
   {
     path: 'formly',
     component: FormlyDemoComponent,
+  },
+  {
+    path: 'webgl-study',
+    component: WebglStudyComponent,
   },
 ];
 

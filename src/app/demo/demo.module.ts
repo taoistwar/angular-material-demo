@@ -28,6 +28,7 @@ import { NgContentIndexComponent } from './ng-content-index/ng-content-index.com
 import { ChildDemoComponent } from './view-child-demo/child-demo/child-demo.component';
 import { ViewChildDemoComponent } from './view-child-demo/view-child-demo.component';
 import { WebglDemoComponent } from './webgl-demo/webgl-demo.component';
+import { WebglStudyComponent } from './webgl-study/webgl-study.component';
 @NgModule({
   declarations: [
     ViewChildDemoComponent,
@@ -46,6 +47,7 @@ import { WebglDemoComponent } from './webgl-demo/webgl-demo.component';
     CanvasDemoComponent,
     WebglDemoComponent,
     FormlyDemoComponent,
+    WebglStudyComponent,
   ],
   imports: [
     CommonModule,
