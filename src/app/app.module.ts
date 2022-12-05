@@ -3,7 +3,7 @@ import { registerLocaleData } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import zh from '@angular/common/locales/zh';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
@@ -17,6 +17,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { IconDefinition } from '@ant-design/icons-angular';
 import * as AllIcons from '@ant-design/icons-angular/icons';
+import { FormlyModule } from '@ngx-formly/core';
+import { FormlyMaterialModule } from '@ngx-formly/material';
 import { NZ_I18N, zh_CN } from 'ng-zorro-antd/i18n';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { AppRoutingModule } from './app-routing.module';
@@ -56,6 +58,9 @@ const icons: IconDefinition[] = Object.keys(antDesignIcons).map(
     MatCardModule,
     MatMenuModule,
     FormsModule,
+    ReactiveFormsModule,
+    FormlyModule.forRoot(),
+    FormlyMaterialModule,
     HttpClientModule,
     NzIconModule.forRoot(icons),
   ],
