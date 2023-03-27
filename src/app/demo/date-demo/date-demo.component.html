@@ -1,0 +1,94 @@
+<form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()">
+  <nz-form-item>
+    <nz-form-label nzSpan="4" nzFor="id">告警ID</nz-form-label>
+    <nz-form-control nzSpan="18">
+      <input
+        class="ap-readonly"
+        [readonly]="true"
+        nz-input
+        id="id"
+        formControlName="id"
+      />
+    </nz-form-control>
+  </nz-form-item>
+  <div formArrayName="config">
+    <div
+      class="group"
+      *ngFor="let form of configForm.controls; let i = index"
+      [formGroupName]="i"
+      nz-row
+    >
+      <div nz-col nzSpan="4"></div>
+      <div nz-col nzSpan="8">
+        <nz-form-item>
+          <nz-form-control nzErrorTip="请输入参数名!">
+            <input nz-input formControlName="cKey" />
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+      <div nz-col nzSpan="8">
+        <nz-form-item *ngIf="i === 0">
+          <nz-form-control [nzXs]="24" nzErrorTip="请输入值!">
+            <nz-date-picker
+              nzMode="week"
+              formControlName="cValue"
+              (ngModelChange)="onChange($event)"
+            ></nz-date-picker>
+          </nz-form-control>
+        </nz-form-item>
+        <nz-form-item *ngIf="i === 1">
+          <nz-form-control [nzXs]="24" nzErrorTip="请输入值!">
+            <nz-date-picker
+              nzMode="day"
+              nzFormat="yyyy-MM-dd"
+              formControlName="cValue"
+              (ngModelChange)="onChange($event)"
+            ></nz-date-picker>
+          </nz-form-control>
+        </nz-form-item>
+        <nz-form-item *ngIf="i === 2">
+          <nz-form-control [nzXs]="24" nzErrorTip="请输入值!">
+            <nz-date-picker
+              nzMode="month"
+              nzFormat="yyyy-MM"
+              formControlName="cValue"
+              (ngModelChange)="onChange($event)"
+            ></nz-date-picker>
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+      <div nz-col nzSpan="4">
+        <button
+          style="color: red"
+          nz-button
+          class="dynamic-delete-button"
+          (click)="removeConfigForm(i)"
+        >
+          <span nz-icon nzType="minus-circle-o"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <nz-form-item>
+    <nz-form-label nzNoColon="true" nzSpan="4"></nz-form-label>
+    <nz-form-control nzSpan="18">
+      <button
+        style="width: 100%"
+        type="button"
+        nz-button
+        nzType="dashed"
+        (click)="newConfigForm()"
+      >
+        <i nz-icon nzType="plus"></i>
+        添加
+      </button>
+    </nz-form-control>
+  </nz-form-item>
+
+  <nz-form-item>
+    <nz-form-control nzSpan="22" style="text-align: right">
+      <button type="submit" nzType="primary" nz-button>提交</button>
+    </nz-form-control>
+  </nz-form-item>
+</form>

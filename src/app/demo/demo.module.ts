@@ -1,9 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormlyModule } from '@ngx-formly/core';
 import { FormlyMaterialModule } from '@ngx-formly/material';
 import { NzButtonModule } from 'ng-zorro-antd/button';
+import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
 import { NzDividerModule } from 'ng-zorro-antd/divider';
 import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
 import { NzGridModule } from 'ng-zorro-antd/grid';
@@ -13,6 +14,7 @@ import { NzPopconfirmModule } from 'ng-zorro-antd/popconfirm';
 import { NzSpaceModule } from 'ng-zorro-antd/space';
 import { CanvasDemoComponent } from './canvas-demo/canvas-demo.component';
 import { DagDemoComponent } from './dag-demo/dag-demo.component';
+import { DateDemoComponent } from './date-demo/date-demo.component';
 import { DemoRoutingModule } from './demo-routing.module';
 import { DirectiveDemoComponent } from './directive-demo/directive-demo.component';
 import { RainbowDirective } from './directive-demo/rainbow.directive';
@@ -25,6 +27,7 @@ import { IndexDemoComponent } from './index-demo/index-demo.component';
 import { NgContentDemoComponent } from './ng-content-index/ng-content-demo/ng-content-demo.component';
 import { NgContentDemo2Component } from './ng-content-index/ng-content-demo2/ng-content-demo2.component';
 import { NgContentIndexComponent } from './ng-content-index/ng-content-index.component';
+import { RxjsDemoComponent } from './rxjs-demo/rxjs-demo.component';
 import { ChildDemoComponent } from './view-child-demo/child-demo/child-demo.component';
 import { ViewChildDemoComponent } from './view-child-demo/view-child-demo.component';
 import { WebglDemoComponent } from './webgl-demo/webgl-demo.component';
@@ -48,9 +51,12 @@ import { WebglStudyComponent } from './webgl-study/webgl-study.component';
     WebglDemoComponent,
     FormlyDemoComponent,
     WebglStudyComponent,
+    RxjsDemoComponent,
+    DateDemoComponent,
   ],
   imports: [
     CommonModule,
+    NzDatePickerModule,
     NzDropDownModule,
     DemoRoutingModule,
     NzPopconfirmModule,
@@ -64,6 +70,7 @@ import { WebglStudyComponent } from './webgl-study/webgl-study.component';
     ReactiveFormsModule,
     FormlyModule.forRoot(),
     FormlyMaterialModule,
+    FormsModule,
   ],
 })
 export class DemoModule {}

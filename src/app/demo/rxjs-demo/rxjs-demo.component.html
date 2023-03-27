@@ -1,0 +1,16 @@
+<p>rxjs-demo works!</p>
+<select [(ngModel)]="selectedUserId" (ngModelChange)="changeUser()">
+  <option>Select a User</option>
+  <option *ngFor="let user of users" [value]="user.id">{{ user.name }}</option>
+</select>
+<br />
+<select [(ngModel)]="blackListedUsers" (ngModelChange)="changeUser()" multiple>
+  <option *ngFor="let user of users" [value]="user.id">{{ user.name }}</option>
+</select>
+<br />
+Allow black listed users<br />
+<input type="checkbox" [(ngModel)]="allowBlackListedUsers" />
+<br />
+<button [disabled]="isUserBlackListed && !allowBlackListedUsers">Submit</button>
+<br />
+本文地址：https://news.sangniao.com/p/2964797959
